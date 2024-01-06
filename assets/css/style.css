@@ -262,7 +262,8 @@ header {
 }
 
 .paralax_div {
-    background: url(/assets/img/6c2e9075cc86f777dfcb0eb9ff66e7b9.jpg) center;
+    background-image: url(../img/6c2e9075cc86f777dfcb0eb9ff66e7b9.jpg);
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
