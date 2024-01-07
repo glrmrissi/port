@@ -1,6 +1,6 @@
 :root {
-    --pink: #ff6dff;
-    --pink-pastel: #ff9cff;
+    --pink: #420d42;
+    --pink-pastel: #a59fa5;
 }
 
 
@@ -40,6 +40,9 @@ header {
     height: 5vh;
     background-color: rgb(144, 86, 238);
     border-bottom:dotted 3px rgb(0, 0, 0);
+}
+.items_header {
+    margin: 1vh;
 }
 
 
@@ -257,7 +260,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
+    background-color: rgb(133, 133, 133);
     height: 100vh;
 }
 
@@ -293,6 +296,6 @@ header {
 }
 
 .encomende a:hover {
-    background-color: #ff6dff;
+    background-color: #583a58;
     transition: all 0.4s;
 }
