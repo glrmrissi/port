@@ -1,6 +1,12 @@
 :root {
-    --pink: #420d42;
-    --pink-pastel: #a59fa5;
+    --pink: #ff97ff;
+    --pink-pastel: #ffa9ff;
+    --brow: #DAC7A9;
+    --brow-pastel: #F2DBBC;
+    --salmon-pastel: #F5E1D6;
+    --salmon: #E4AB98;
+    --bisque: #F9F2E0;
+
 }
 
 
@@ -26,6 +32,10 @@ body {
     height: 100%;
 }
 
+svg {
+    cursor: pointer;
+}
+
 img {
     object-fit: cover;
     width: auto;
@@ -38,15 +48,15 @@ header {
     align-items: center;
     width: 100%;
     height: 5vh;
-    background-color: rgb(144, 86, 238);
-    border-bottom:dotted 3px rgb(0, 0, 0);
+    background-color: var(--brow);
 }
+
 .items_header {
     margin: 1vh;
 }
 
 
-.items_header img{
+.items_header img {
     height: 5vh;
 }
 
@@ -56,7 +66,7 @@ header {
     display: grid;
     grid-template-rows: 23% 47.5% 23%;
     align-items: center;
-    background-color: var(--pink-pastel);
+    background-color: var(--brow-pastel);
     height: 95dvh;
 }
 
@@ -67,9 +77,22 @@ header {
     text-align: center;
 }
 
+
+
 .info h2 {
     font-weight: 500;
+    background:
+        linear-gradient(-45deg, #ffffff00 40%, #fff 0 60%, #ffffff 0) right/300% 100% no-repeat,
+        linear-gradient(-45deg, #ffffff00 40%, #ffffff 0 60%, #ffffff00 0) right/300% 100% no-repeat;
+    background-clip: text, padding-box;
+    transition: 1s;
+    cursor: pointer;
 }
+
+.info h2:hover {
+    background-position: left;
+}
+
 
 .slider__div {
     display: flex;
@@ -80,13 +103,11 @@ header {
 }
 
 .slider__imgs {
-    background-color: antiquewhite;
-    border: solid 1px cyan;
     width: calc(100%/5);
     height: 100%;
 }
 
-.slider__imgs img{
+.slider__imgs img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -204,14 +225,17 @@ header {
     margin-left: -20%;
     transition: all .5s;
 }
+
 #radio6:checked~.first {
     margin-left: -25%;
     transition: all .5s;
 }
+
 #radio7:checked~.first {
     margin-left: -30%;
     transition: all .5s;
 }
+
 #radio8:checked~.first {
     margin-left: -35%;
     transition: all .5s;
@@ -220,7 +244,7 @@ header {
 .manual_btn.checked:before {
     content: "";
     width: 0vh;
-    background-color: var(--pink);
+    background-color: var(--salmon-pastel);
     transform-origin: left;
     transition: transform 0.3s;
     transform: scaleX(0);
@@ -230,7 +254,7 @@ header {
     border-radius: 5px;
     margin-right: 8px;
     width: 2vh;
-    background-color: var(--pink);
+    background-color: var(--salmon);
     transform-origin: left;
     transform: scaleX(1.2);
     transition: 0.3s;
@@ -260,17 +284,17 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(133, 133, 133);
+    background-color: var(--brow-pastel);
     height: 100vh;
 }
 
 .paralax_div {
-    background-image: url(../img/6c2e9075cc86f777dfcb0eb9ff66e7b9.jpg);
+    background-image: url(../img/Cabana.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    box-shadow: 0px 0px 100px 6px #a0a0a0ce;
+    box-shadow: 0px 0px 100px 6px #00000023;
     width: 100%;
     height: 50%;
     z-index: 0;
@@ -280,22 +304,22 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(0,0,0);
-    background: radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 35%, rgba(0,0,0,1) 100%);
+    background: rgb(0, 0, 0);
+    background: radial-gradient(circle, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 9%, rgba(0, 0, 0, 0.247) 100%);
     width: 100%;
     height: 100%;
 }
 
 .encomende a {
-    background-color: #1900ff;
+    background-color: var(--pink);
     padding: 0.6em;
     border-radius: 16px;
-    color: #ffffff;
+    color: #000000;
     text-decoration: none;
     transition: all 0.4s;
 }
 
 .encomende a:hover {
-    background-color: #583a58;
+    background-color: var(--pink-pastel);
     transition: all 0.4s;
 }
