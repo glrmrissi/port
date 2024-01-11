@@ -39,3 +39,17 @@ updateLabelBackground();
 document.querySelectorAll('input[type="radio"]').forEach(function (radio) {
     radio.addEventListener('change', updateLabelBackground);
 });
+
+let dark = document.getElementById("darkmode")
+
+dark.addEventListener('click', () =>{
+  if (dark.classList.contains('active')) {
+    dark.classList.remove('active');
+    dark.classList.add('reverse');
+} else {
+    dark.classList.remove('reverse');
+    dark.classList.add('active');
+}
+      document.body.classList.toggle('dark')
+      
+  })
