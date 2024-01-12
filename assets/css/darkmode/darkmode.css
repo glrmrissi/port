@@ -1,12 +1,15 @@
 .dark {
-    transition: 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
-
 
 .dark header {
-    background-color: var(--purple-two);
+    background-color: #ffffff1f;
+    backdrop-filter: saturate(180%) blur(20px);
 }
 
+.dark .all_components  {
+    background-color: #494949;
+}
 
 .dark .slider_section {
     background-color: var(--black);
@@ -38,8 +41,9 @@
     background-color: var(--green-lima);
 }
 
-.dark .items_header {
-    color: #fff;
+.dark .items_header h2{
+    color: #fff; 
+    transition: .3s;
 }
 
 .dark .manual_btn {

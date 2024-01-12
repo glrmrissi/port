@@ -29,8 +29,19 @@
 body {
     width: 100%;
     height: 100%;
+    background-color: var(--brow-pastel);
     scroll-behavior: smooth;
     user-select: none;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+    background-color: #02020200
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #0000007e;
+    border-radius: 5px;  
 }
 
 .container-fluid {
@@ -41,6 +52,7 @@ body {
 .all_components {
     width: 100%;
     height: 100%;
+    background-color: var(--brow-pastel);
 }
 
 svg {
@@ -54,12 +66,17 @@ img {
 
 header {
     position: sticky;
+    left: 0;
+    right: 0;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 5vh;
-    background-color: var(--brow);
+    background-color: #0000001f;
+    backdrop-filter: saturate(180%) blur(20px);
+    z-index: 10;
 }
 
 .items_header {
@@ -125,7 +142,7 @@ header {
 
     85.68%,
     100% {
-        background-image: url('../animation/pixil-layer-7.png');
+        background-image: url('../animation/pixil-3.png');
     }
 }
 
@@ -133,7 +150,7 @@ header {
 
     0%,
     14.28% {
-        background-image: url('../animation/pixil-layer-7.png');
+        background-image: url('../animation/pixil-3.png');
     }
 
     14.28%,
@@ -185,14 +202,13 @@ header {
 }
 
 
-
 .info h2 {
     font-weight: 500;
     background:
         linear-gradient(-45deg, #ffffff00 40%, #fff 0 60%, #ffffff 0) right/300% 100% no-repeat,
         linear-gradient(-45deg, #ffffff00 40%, #ffffff 0 60%, #ffffff00 0) right/300% 100% no-repeat;
     background-clip: text, padding-box;
-    transition: 1s;
+    transition: 0.3s;
     user-select: none;
     cursor: pointer;
     padding: 6px;
@@ -212,35 +228,6 @@ header {
     height: 100%;
 }
 
-.slider__imgs {
-    width: calc(100%/5);
-    height: 100%;
-}
-
-.slider__imgs img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.controls {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    left: 50%;
-    top: 50%;
-}
-
-.right {
-    position: absolute;
-    right: -180px;
-}
-
-.left {
-    position: absolute;
-    left: -180px;
-}
-
 /* =========================================================================== */
 
 /* Carousel */
@@ -253,6 +240,7 @@ header {
     align-items: center;
     width: 100%;
     height: 100%;
+    position: relative;
     overflow: hidden;
 
 }
@@ -270,21 +258,32 @@ header {
 .carousel_img {
     width: 25%;
     display: flex;
-    position: relative;
     object-fit: cover;
     align-items: center;
+    position: relative;
 }
 
 .carousel_img .slider__div {
+    position: relative;
     width: calc(100%/5);
 }
 
+.carousel_img .slider__div:active {
+    transition: all .3s ease-in-out;
+    width:  60vh;
+    z-index: 2;
+}
+
 .carousel_img img {
+    user-select: none;
+    border-image-outset: 10px;
     image-rendering: optimizeQuality;
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
+
+
 
 .manual_pass {
     position: absolute;
@@ -301,6 +300,7 @@ header {
     border-radius: 9px;
     transition: all .3s;
     cursor: pointer;
+    z-index: 2;
 }
 
 .manual_btn:not(:last-child) {
