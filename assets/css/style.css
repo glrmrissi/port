@@ -14,7 +14,9 @@
     --green: #3f6d4e;
     --green-lima: #8bd450;
     --blue-marine: #1d1a2f;
-    --black: #0f0f0f;
+    --black: #1d1d1d;
+    --cyan-pastel: #CCD6D6;
+    --vinho: #8A5662;
 }
 
 
@@ -33,6 +35,12 @@ body {
     scroll-behavior: smooth;
     user-select: none;
 }
+
+
+body.no-scroll {
+    overflow: hidden;
+}
+
 
 body::-webkit-scrollbar {
     width: 5px;
@@ -76,9 +84,12 @@ header {
     height: 5vh;
     background-color: #0000001f;
     backdrop-filter: saturate(180%) blur(20px);
-    z-index: 10;
+    z-index: 100;
 }
 
+a {
+    color: #fff;
+}
 .items_header {
     margin: 1vh;
 }
@@ -192,6 +203,7 @@ header {
     align-items: center;
     background-color: var(--brow-pastel);
     height: 95dvh;
+    z-index: 2;
 }
 
 .info {
@@ -204,10 +216,6 @@ header {
 
 .info h2 {
     font-weight: 500;
-    background:
-        linear-gradient(-45deg, #ffffff00 40%, #fff 0 60%, #ffffff 0) right/300% 100% no-repeat,
-        linear-gradient(-45deg, #ffffff00 40%, #ffffff 0 60%, #ffffff00 0) right/300% 100% no-repeat;
-    background-clip: text, padding-box;
     transition: 0.3s;
     user-select: none;
     cursor: pointer;
@@ -216,7 +224,7 @@ header {
 }
 
 .info h2:hover {
-    background-position: left;
+    color: #5f5f5f;
 }
 
 
@@ -242,7 +250,6 @@ header {
     height: 100%;
     position: relative;
     overflow: hidden;
-
 }
 
 .carousel_elements {
@@ -260,6 +267,7 @@ header {
     display: flex;
     object-fit: cover;
     align-items: center;
+    cursor: pointer;
     position: relative;
 }
 
@@ -268,11 +276,6 @@ header {
     width: calc(100%/5);
 }
 
-.carousel_img .slider__div:active {
-    transition: all .3s ease-in-out;
-    width:  60vh;
-    z-index: 2;
-}
 
 .carousel_img img {
     user-select: none;
@@ -390,6 +393,34 @@ header {
     margin-right: 5px;
 }
 
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.733);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.popup img {
+    transition: all 1s ease-in-out;
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 5px;
+}
+
+.close-btn {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    cursor: pointer;
+}
+
 .paralax {
     display: flex;
     justify-content: center;
@@ -399,7 +430,7 @@ header {
 }
 
 .paralax_div {
-    background-image: url(../img/Cabana.png);
+    background-image: url(../img/A_Cabana_20240112172249.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -461,7 +492,7 @@ header {
 .profile_center:hover {
     overflow: hidden;
     color: #c300ff;
-    box-shadow: 0 0 25px #000000;
+    box-shadow: 0 0 30px #000000;
 }
 
 
@@ -477,4 +508,34 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.footer_page {
+    display: grid;
+    align-items: center;
+    padding: 3vh;
+    grid-template-rows: 40% 60%;
+    box-shadow: 0px 0px 100px 6px #ffffff10 inset;
+    background-color: #000000;
+    width: 100%;
+    height: 50vh;
+}
+
+.footer_page div{
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+}
+.img_footer {
+    display: flex;
+    justify-content: baseline;
+}
+.img_footer img{
+    width: 30px;
+}
+
+
+.footer_page div a {
+    font-size: 12px;
+    color: #fff;
 }

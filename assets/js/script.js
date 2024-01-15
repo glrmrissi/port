@@ -53,3 +53,17 @@ dark.addEventListener('click', () =>{
       document.body.classList.toggle('dark')
       
   })
+
+  let popup = document.getElementById('popup')
+
+  function showPopup(imageSrc) {
+    document.getElementById('popupImg').src = imageSrc;
+    popup.style.display = 'flex';
+    document.body.classList.add('no-scroll');
+    popup.style.transition = "1s";
+}
+
+function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+    document.body.classList.remove('no-scroll');
+}

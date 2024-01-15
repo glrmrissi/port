@@ -8,7 +8,7 @@
 }
 
 .dark .all_components  {
-    background-color: #494949;
+    background-color: var(--black);
 }
 
 .dark .slider_section {
@@ -21,10 +21,6 @@
 
 .dark .info h2 {
     color: #fff;
-    background:
-    linear-gradient(-35deg, #ffffff00 40%, var(--green-lima) 0 60%, var(--green-lima) 0) right/300% 100% no-repeat,
-    linear-gradient(-35deg, #ffffff00 40%, var(--green-lima) 0 60%, var(--green-lima) 0) right/300% 100% no-repeat;
-    background-clip: text, padding-box;
     border-radius: 10px;
     padding: 6px;
 }
@@ -63,7 +59,7 @@
 .dark .profile_center:hover {
     overflow: hidden;
     color: #73ff00;
-    box-shadow: 0 0 25px #73ff00;
+    box-shadow: 0 0 25px var(--cyan-pastel);
 }
 
 .dark .profile {
