@@ -404,7 +404,7 @@ a {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    z-index: 10;
+    z-index: 100;
 }
 
 .popup img {
